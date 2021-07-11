@@ -47,8 +47,8 @@ class Komentar extends Migration
 		]);
 
 		$this->forge->addKey('id', TRUE);
-		$this->forge->addForeignKey('id_barang', 'barang', 'id');
-		$this->forge->addForeignKey('id_user', 'user', 'id');
+		$this->forge->addForeignKey('id_barang', 'barang', 'id', 'CASCADE', 'CASCADE');
+		$this->forge->addForeignKey('id_user', 'user', 'id', 'CASCADE', 'CASCADE');
 		$this->forge->createTable('komentar');
 	}
 
